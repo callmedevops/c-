@@ -1,0 +1,23 @@
+/********
+ *
+ * Sujit Maharjan
+ *
+ * WAP to create a class LandMeasure that reads Ropani,ana, paisa and Dam as its data members. Write a function to pass two object of type land measure and return its sum
+ * Wap that can store Department ID and Department name with constructor. Also write destructor in the same class and show that objects are destroyed in reverse order of creation with suitable message
+ *******/
+
+#include <iostream>
+
+using namespace std;
+#define SUCESS 0
+
+class LandMeasure
+{
+ private:
+ public:
+};
+int main()
+{
+  
+  return SUCESS;
+}
