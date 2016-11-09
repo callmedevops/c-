@@ -1,21 +1,25 @@
-var labApp = angular.model('labApp',[]);
+var app = angular.module('labapp',[]);
 
-labApp.controller('labListController',
-                  function labListController($scope) {
-                      $scope.labs = [
-                          {
-                              no: 1,
-                              description: "lab 1"
-                          },
-                          {
-                              no: 2,
-                              description: "lab 1"
-                          },
-                          {
-                              no: 1,
-                              description: "lab 1"
-                          }
-                      ];
-                  };
-                 )
+app.controller('labListController', [ '$http',
+                                      function ($http) {
+                                          var data = this;
+                                          data.displayLab = 1;
+                                          data.labs = [];
+                                          data.filename = "";
+                                          $http.get('labList.json').success(function(response) {
+                                              data.labs = response;
+                                          });
+                                          data.labfileDisplay = function(labno)
+                                          {
+                                              data.displayLab = labno;
+                                          };
+                                          data.codeDisplay = function(src)
+                                          {
+                                              data.filename = src;
+                                          };
+                                          
+                                          
+                  }                                  ]
+              );
+
                           
