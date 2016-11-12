@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en-us" ng-app="labapp">
+<html lang="en-us" ng-app="labapp" ng-controller="labListController">
   <head>
     <meta charset="UTF-8">
-    <title>Cpp by shubhajeet</title>
+    <title>{{data.title}}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
@@ -11,38 +11,37 @@
     <script src="node_modules/angular/angular.js"></script>
     <script src="app.js"></script>
   </head>
-  <body ng-controller="labListController as labCtrl">>
+  <body>
     <section class="page-header">
-      <h1 class="project-name">Cpp</h1>
-      <h2 class="project-tagline">ioe pulchowk practical of c++</h2>
+      <h1 class="project-name">{{data.title}}</h1>
+      <h2 class="project-tagline">{{data.description}}</h2>
       <a href="https://github.com/shubhajeet/cpp" class="btn">View on GitHub</a>
       <a href="https://github.com/shubhajeet/cpp/zipball/master" class="btn">Download .zip</a>
       <a href="https://github.com/shubhajeet/cpp/tarball/master" class="btn">Download .tar.gz</a>
       <br>
       <section>
         Labs:
-        <ul>
-          <li ng-repeat="lab in labCtrl.labs" ng-click="labCtrl.labfileDisplay(lab.no)" class="btn">{{lab.no}}</li>
-        </ul>
+        <ol>
+          <li ng-repeat="lab in data.labs" ng-click="labfileDisplay($index)" class="btn">{{lab.no}}</li>
+        </ol>
       </section>
     </section>
     <section class="main-content" >
-      <h3>Lab {{labCtrl.displayLab}}</h3>
-      <blockquotes>{{labCtrl.labs[labCtrl.displayLab].description}}</blockquotes>
-      <ul>
-      <li ng-repeat="code in labCtrl.labs[labCtrl.displayLab].files" ng-click="labCtrl.codeDisplay(code.src)">
-        <a ng-click="labCtrl.filename = code.src">{{code.description}}</a>
+      <h3>Lab {{data.labs[data.displayLab].no}}</h3>
+      <blockquotes>{{data.labs[data.displayLab].description}}</blockquotes>
+      <ol>
+      <li ng-repeat="code in data.labs[data.displayLab].files" ng-click="codeDisplay(code.src)">
+        <a ng-click="filename = code.src">{{code.description}}</a>
         <span>{{lab.description}}</span>
       </li>
-      </ul>
+      </ol>
     </section>
-    <section class="main-content" ng-show="labCtrl.filename.length">
+    <section class="main-content" ng-show="data.filename.length">
       <h4>Code</h4>
-      <blockquote>{{}}</blockquote>
     <code>
-      <pre ng-include="labCtrl.filename"></pre>
+        <pre ng-include="data.filename"></pre>
     </code>
     </section>
-
   </body>
+
 </html>

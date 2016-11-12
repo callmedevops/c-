@@ -1,0 +1,25 @@
+{    "title": "Cpp Lab",
+    "description" : "IOE pulchowk Cpp lab question and answer",
+    "labs" : [{
+        "no":1,
+        "description":"lab1",
+        "files":[{
+                "src":"lab1/inf.c",
+                "description":"WAP bla bla bal"
+            }]
+        },
+        {
+        "no":2,
+        "description":"lab2",
+            "files":[{
+            "src":"lab1/inf.c",
+            "description":"WAP bla bla bal"
+                },
+            {
+            "src":"lab1/inf.c",
+            "description":"WAP bla bla bal"
+            }
+            ]
+        }
+    ]
+}
