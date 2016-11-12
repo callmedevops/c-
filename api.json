@@ -1,25 +1,261 @@
 {    "title": "Cpp Lab",
     "description" : "IOE pulchowk Cpp lab question and answer",
-    "labs" : [{
-        "no":1,
-        "description":"lab1",
-        "files":[{
-                "src":"lab1/inf.c",
-                "description":"WAP bla bla bal"
-            }]
-        },
-        {
-        "no":2,
-        "description":"lab2",
-            "files":[{
-            "src":"lab1/inf.c",
-            "description":"WAP bla bla bal"
-                },
-            {
-            "src":"lab1/inf.c",
-            "description":"WAP bla bla bal"
-            }
-            ]
-        }
-    ]
+     "labs" : [
+         {
+             "no": 1,
+             "description" : "lab1",
+             "files":[
+                 {
+                     "src":"lab1/error.c",
+                     "description":"Store and retrieve the name of the students and obtained marks in c programming in 1st semester using structure."
+                 },
+                 {
+                     "src":"lab1/find.c",
+                     "description":"Write a program to find the position of the character 'C' in the sentence 'idea without execution is worthless' using pointer and string."
+                 },
+                 {
+                     "src":"lab1/inf.c",
+                     "description":"WAP to read name, rollno, address, and phone number of each student in your class using structure. Store the information in file so that you can recover the information later While recovering the inforamtion from the file sort the information alphabetically according to the name"
+                 },
+                 {
+                     "src":"lab1/info.c",
+                     "description":"Write a program to find the average expenditure of a company for each month of each year, each year and average over the range of years specified. Use arrays to construct a table, display the table of expenditure and find the sum and average. "
+                 },
+                 {
+                     "src":"lab1/stu.c",
+                     "description":"Store and retrieve the name of the students and obtained marks in c programming in 1st semester using structure."
+                 }
+             ]
+         },
+         
+         {
+             "no": 2,
+             "description" : "lab2",
+             "files":[
+                 {
+                     "src":"lab2/convert.cpp",
+                     "description":""
+                 },
+                 {
+                     "src":"lab2/date.cpp",
+                     "description":""
+                 },
+                 {
+                     "src":"lab2/employee.cpp",
+                     "description":""
+                 },
+                 {
+                     "src":"lab2/namespace.cpp",
+                     "description":""
+                 },
+                 {
+                     "src":"lab2/staff.cpp",
+                     "description":""
+                 },
+                 {
+                     "src":"lab2/temp.cpp",
+                     "description":""
+                 }
+             ]
+         },
+         
+         {
+             "no": 3,
+             "description" : "lab3",
+             "files":[
+                 {
+                     "src":"lab3/carpark.cpp",
+                     "description":""
+                 },
+                 {
+                     "src":"lab3/employee.cpp",
+                     "description":""
+                 },
+                 {
+                     "src":"lab3/objects.cpp",
+                     "description":""
+                 },
+                 {
+                     "src":"lab3/prime.cpp",
+                     "description":""
+                 },
+                 {
+                     "src":"lab3/temp.cpp",
+                     "description":""
+                 }
+        
+             ]
+         },
+         
+         {
+             "no": 4,
+             "description" : "lab4",
+             "files":[
+                 {
+                     "src":"lab4/deparment.cpp",
+                     "description":""
+                 },
+                 {
+                     "src":"lab4/static.cpp",
+                     "description":""
+                 },
+                 {
+                     "src":"lab4/string.cpp",
+                     "description":""
+                 },
+                 {
+                     "src":"lab4/time.cpp",
+                     "description":""
+                 },
+                 {
+                     "src":"lab4/vehicle.cpp",
+                     "description":""
+                 },
+                 {
+                     "src":"lab4/const.cpp",
+                     "description":""
+                 }
+             ]
+         },
+         
+         {
+             "no": 5,
+             "description" : "lab5",
+             "files":[
+                 {
+                     "src":"lab5/cordinate.cpp",
+                     "description":""
+                 },
+                 {
+                     "src":"lab5/date.cpp",
+                     "description":""
+                 },
+                 {
+                     "src":"lab5/Integer.cpp",
+                     "description":""
+                 },
+                 {
+                     "src":"lab5/vector.cpp",
+                     "description":""
+                 }
+             ]
+         },
+         
+         {
+             "no": 6,
+             "description" : "lab6",
+             "files":[
+                 {
+                     "src":"lab6/complex.cpp",
+                     "description":""
+                 },
+                 {
+                     "src":"lab6/distance.cpp",
+                     "description":""
+                 },
+                 {
+                     "src":"lab6/meter-feet.cpp",
+                     "description":""
+                 },
+                 {
+                     "src":"lab6/musicain.cpp",
+                     "description":""
+                 },
+                 {
+                     "src":"lab6/person.cpp",
+                     "description":""
+                 }
+             ]
+         },
+
+         {
+             "no": 7,
+             "description" : "lab7",
+             "files":[
+                 {
+                     "src":"lab7/person.cpp",
+                     "description":""
+                 },
+                 {
+                     "src":"lab7/shape.cpp",
+                     "description":""
+                 },
+                 {
+                     "src":"lab7/Student.cpp",
+                     "description":""
+                 },
+                 {
+                     "src":"lab7/Vehicle.cpp",
+                     "description":""
+                 }
+             ]
+         },
+         
+         {
+             "no": 8,
+             "description" : "lab8",
+             "files":[
+                 {
+                     "src":"lab8/complex.cpp",
+                     "description":""
+                 },
+                 {
+                     "src":"lab8/department.cpp",
+                     "description":""
+                 },
+                 {
+                     "src":"lab8/manipulator.cpp",
+                     "description":""
+                 },
+                 {
+                     "src":"lab8/student.cpp",
+                     "description":""
+                 },
+                 {
+                     "src":"lab8/transaction.cpp",
+                     "description":""
+                 }
+             ]
+         },
+         
+         {
+             "no": 9,
+             "description" : "lab9",
+             "files":[
+                 {
+                     "src":"lab9/catch.cpp",
+                     "description":""
+                 },
+                 {
+                     "src":"lab9/queue.cpp",
+                     "description":""
+                 },
+                 {
+                     "src":"lab9/stack.cpp",
+                     "description":""
+                 },
+                 {
+                     "src":"lab9/sum.cpp",
+                     "description":""
+                 }
+             ]
+         },
+
+         {
+             "no" : "old is gold",
+             "description" : "Some old of gold question solution",
+             "files" : [
+                 {
+                     "src" : "oldisgold/deparment.cpp",
+                     "description" : ""
+                 },
+                 {
+                     "src" : "oldisgold/LandMeasure.cpp",
+                     "description" : ""
+                 }
+                 ]
+         }
+     ]
 }
+
+
