@@ -9,13 +9,30 @@ app.controller('labListController', function ($scope, $route, $routeParams, $loc
     var data = $scope.data;              
     function reset()
     {
-        $scope.data.displayLab = 0;
-        $scope.data.filename = $scope.data.labs[$routeParams.labId].files[$routeParams.qNo].src;
+        if($routeParams.labId)
+        {
+            $scope.data.displayLab = $routeParams.labId;
+            
+            if($routeParams.qNo)
+            {
+                $scope.data.filename =$scope.data.labs[$routeParams.labId].files[$routeParams.qNo].src;
+            }
+            else
+            {
+                $scope.data.filename = "";
+            }
+        }
+        else
+        {
+            $scope.data.displayLab = 0;
+        }
+        
         $scope.codeDisplay($scope.data.filename);
     }
     $http.get('api.json').success(function(response) {
         $scope.data = response;
-        //reset();
+        reset();
+        console.log($scope);
         
     });
     
