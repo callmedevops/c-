@@ -1,6 +1,6 @@
 var app = angular.module('labapp',['ngRoute']);
 
-app.controller('labListController', function ($scope, $route, $routeParams, $loation, $http) {
+app.controller('labListController', function ($scope, $route, $routeParams, $location, $http) {
     $scope.data = [];
     $scope.$route = $route;
     $scope.$location = $location;
@@ -9,13 +9,13 @@ app.controller('labListController', function ($scope, $route, $routeParams, $loa
     var data = $scope.data;              
     function reset()
     {
-        $scope.data.displayLab = $routeParams.labId;
+        $scope.data.displayLab = 0;
         $scope.data.filename = $scope.data.labs[$routeParams.labId].files[$routeParams.qNo].src;
         $scope.codeDisplay($scope.data.filename);
     }
     $http.get('api.json').success(function(response) {
         $scope.data = response;
-        reset();
+        //reset();
         
     });
     
@@ -40,8 +40,13 @@ app.config(function ($routeProvider) {
         .when("/:labId/:qNo",{
             
         }
-             );
+             )
+        .when("/:labId",{
+        }).
+        when("/",{
+   
+});
 }
           );
 
-                          
+
