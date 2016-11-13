@@ -23,7 +23,7 @@
       <section>
         Labs:
         <ol>
-          <li ng-href="#/{{$index}}" ng-repeat="lab in data.labs" ng-click="labfileDisplay($index)" class="btn">{{lab.no}}</li>
+          <li ng-repeat="lab in data.labs" ng-click="labfileDisplay($index)" class="btn">{{lab.no}}</li>
         </ol>
       </section>
     </section>
@@ -32,7 +32,7 @@
       <blockquotes>{{data.labs[data.displayLab].description}}</blockquotes>
       <ol>
       <li ng-repeat="code in data.labs[data.displayLab].files | orderBy: code.no" ng-click="codeDisplay(code.src)">
-        <a ng-href="#/{{data.displaylab}}/{{$index}}" ng-click="filename = code.src">{{code.description}}</a>
+        <a ng-click="filename = code.src">{{code.description}}</a>
         <span>{{lab.description}}</span>
       </li>
       </ol>

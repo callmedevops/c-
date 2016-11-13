@@ -15,7 +15,7 @@ app.controller('labListController', function ($scope, $route, $routeParams, $loc
             
             if($routeParams.qNo)
             {
-                $scope.data.filename =$scope.data.labs[$routeParams.labId].files[$routeParams.qNo].src;
+                $scope.data.filename = $scope.data.labs[$routeParams.labId].files[$routeParams.qNo].src;
             }
             else
             {
@@ -39,10 +39,11 @@ app.controller('labListController', function ($scope, $route, $routeParams, $loc
     $scope.labfileDisplay = function(labno)
     {
         $scope.data.displayLab = labno;
+        $location.path("/"+labno);
     };
-    $scope.codeDisplay = function(src)
+    $scope.codeDisplay = function(qNo)
     {
-        $scope.data.filename = src;
+        $scope.data.filename = $scope.data.labs[$scope.data.displayLab].files[qNo].src;;
         $http.get(src).success(function(response) {
             $scope.data.filecontent = response;
         });
