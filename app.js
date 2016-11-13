@@ -15,7 +15,7 @@ app.controller('labListController', function ($scope, $route, $routeParams, $loc
             
             if($routeParams.qNo)
             {
-                $scope.data.filename = $scope.data.labs[$routeParams.labId].files[$routeParams.qNo].src;
+                $scode.codeDisplay($routeParams.qNo);
             }
             else
             {
