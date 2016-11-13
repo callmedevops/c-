@@ -15,7 +15,7 @@ app.controller('labListController', function ($scope, $route, $routeParams, $loc
             
             if($routeParams.qNo)
             {
-                $scode.codeDisplay($routeParams.qNo);
+                $scope.codeDisplay($routeParams.qNo);
             }
             else
             {
@@ -27,7 +27,6 @@ app.controller('labListController', function ($scope, $route, $routeParams, $loc
             $scope.data.displayLab = 0;
         }
         
-        $scope.codeDisplay($scope.data.filename);
     }
     $http.get('api.json').success(function(response) {
         $scope.data = response;
