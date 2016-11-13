@@ -31,7 +31,7 @@ app.controller('labListController', function ($scope, $route, $routeParams, $loc
     $http.get('api.json').success(function(response) {
         $scope.data = response;
         reset();
-        console.log($scope);
+        //console.log($scope);
         
     });
     
