@@ -30,7 +30,7 @@
       <h3>Lab {{data.labs[data.displayLab].no}}</h3>
       <blockquotes>{{data.labs[data.displayLab].description}}</blockquotes>
       <ol>
-      <li ng-repeat="code in data.labs[data.displayLab].files" ng-click="codeDisplay(code.src)">
+      <li ng-repeat="code in data.labs[data.displayLab].files | orderBy: code.no" ng-click="codeDisplay(code.src)">
         <a ng-click="filename = code.src">{{code.description}}</a>
         <span>{{lab.description}}</span>
       </li>
@@ -38,9 +38,8 @@
     </section>
     <section class="main-content" ng-show="data.filename.length">
       <h4>Code</h4>
-      <blockquote>{{data.labs[data.displaylab].description}}</blockquote>
-    <code>
-        <pre ng-include="data.filename"></pre>
+      <code>
+        <pre>{{data.filecontent}}</pre>
     </code>
     <a ng-href="{{data.filename}}">Downloads</a>
     <section id="comment">
@@ -51,6 +50,7 @@
         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
         /*
+        console.log(data);
         var disqus_config = function () {
         this.page.url = 'cpplab.maharjansujit.com.np';  // Replace PAGE_URL with your page's canonical URL variable
         this.page.identifier = data.filename; // Replace PAGE_IDENTIFIER with your page's unique identifier variable

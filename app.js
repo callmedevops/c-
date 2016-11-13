@@ -22,6 +22,9 @@ app.controller('labListController', function ($scope, $http) {
     $scope.codeDisplay = function(src)
     {
         $scope.data.filename = src;
+        $http.get(src).success(function(response) {
+            $scope.data.filecontent = response;
+        });
     };
     
 }
