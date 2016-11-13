@@ -32,7 +32,7 @@
       <blockquotes>{{data.labs[data.displayLab].description}}</blockquotes>
       <ol>
       <li ng-repeat="code in data.labs[data.displayLab].files | orderBy: code.no" ng-click="codeDisplay(code.src)">
-        <a ng-click="filename = code.src">{{code.description}}</a>
+        <a ng-click="codeDisplay($index)">{{code.description}}</a>
         <span>{{lab.description}}</span>
       </li>
       </ol>

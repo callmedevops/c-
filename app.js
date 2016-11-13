@@ -44,9 +44,11 @@ app.controller('labListController', function ($scope, $route, $routeParams, $loc
     $scope.codeDisplay = function(qNo)
     {
         $scope.data.filename = $scope.data.labs[$scope.data.displayLab].files[qNo].src;;
-        $http.get(src).success(function(response) {
+        $location.path("/"+$scope.data.displayLab+"/"+qNo);
+        $http.get($scope.data.filename).success(function(response) {
             $scope.data.filecontent = response;
         });
+
     };
     
 }
