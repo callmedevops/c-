@@ -38,6 +38,7 @@ app.controller('labListController', function ($scope, $route, $routeParams, $loc
     $scope.labfileDisplay = function(labno)
     {
         $scope.data.displayLab = labno;
+        $scope.data.filename = "";
         $location.path("/"+labno);
     };
     $scope.codeDisplay = function(qNo)
